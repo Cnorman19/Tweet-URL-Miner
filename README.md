@@ -3,12 +3,12 @@
 
 Run Command:
 
-	Warning! Following command is deprecated
+	Warning! Following command is deprecated *see changelog*
 	#python collect_tweet_urls.py <input twitter user you wish to grab links from>
 
 Usage:
 	
-	Warning! Following method is deprecated
+	Warning! Following method is deprecated *see changelog*
 	python collect_tweet_urls.py KingJames
 
 Change Log: 
