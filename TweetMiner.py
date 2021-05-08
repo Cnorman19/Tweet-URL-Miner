@@ -19,17 +19,20 @@ class TweetMiner:
         self.api = tweepy.API(auth)
         return self.api
 
-    def getTweets(self, username): 
-        self.api.user_timeline(screen_name = username, count = numberOfTweetsToCollect)
+    def getTweets(self, username, numberOfTweetsToCollect): 
+        tweets = self.api.user_timeline(screen_name = username, count = numberOfTweetsToCollect)
+        
+        for tweet in tweets: # Time complexity O(N)
+            print(tweet)
     
     def displayTweets(self):
         pass  
 
 # Initializing consumeer key and secret as well as access token and secret. 
-consumer_key = os.environ.get('c_k')
-consumer_secret = os.environ.get('c_s')
+consumer_key = os.environ.get('CONSUMER_KEY')
+consumer_secret = os.environ.get('CONSUMER_SECRET')
 
-access_token = os.environ.get('a_t')
-access_token_secret = os.environ.get('a_s')
+access_token = os.environ.get('ACCESS_TOKEN')
+access_token_secret = os.environ.get('ACCESS_SECRET')
 
 tweetMiner = TweetMiner(consumer_key, consumer_secret, access_token, access_token_secret)
