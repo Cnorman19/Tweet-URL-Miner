@@ -15,6 +15,7 @@ Change Log:
 
 	- (5/06/2021) Way too many comments making readability of code generally poor. Lowering number of comments and using more meaningful naming conventions  
 	- (5/06/2021) In the process of adding simple GUI, allowing user to input desired twitter username and carry out a few simple operations regarding said username
+	- (5/12/2021) Fixed get_tweets() method. Added display_tweets() method.
 What I'm learning:
 	
 	- Python GUI using TKINTER (simpledialog module, inherting from frame class, Buttons, Prompts, Storing user input)
