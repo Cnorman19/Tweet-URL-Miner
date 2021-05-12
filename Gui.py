@@ -14,8 +14,11 @@ class Gui(tk.Frame):
     def init_window(self):
         self.master.title("Tweet Miner")
         self.pack(fill=tk.BOTH, expand=1)
+        
+        # Dialogs
         twitterUsername = tk.simpledialog.askstring(title="Enter A Twitter Username", prompt='Please enter a twitter username')
         
+        # Buttons
         collect_tweets_button = tk.Button(self, text = "Collect Tweets", fg = "black" , bg = "gray", command = lambda:[self.request_number_of_tweets_to_collect(),tweetMiner.authenticate(), tweetMiner.getTweets(twitterUsername, self.numberOfTweetsToCollect)])
         collect_tweets_button.place(relx = 0.5, rely = 0.5, anchor = tk.CENTER)
         collect_tweets_button.config(height = 4, width = 20)
